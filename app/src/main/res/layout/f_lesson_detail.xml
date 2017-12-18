@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textSize="15dp"
+            android:textColor="#2a2a2a"
+            android:layout_centerVertical="true"
+            android:text="睡午觉"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#e7e7e7"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/text"
+        android:layout_below="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+        <com.gholl.PinyinTextView
+            xmlns:gholl="http://www.gholl.com"
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="17dp"
+            android:text="死死死死死死死死死死死死死死死死死死死死死死死死死死死死死\n滴答滴答滴答滴答滴答滴答滴答滴答滴答\n呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜"
+            gholl:textColor="#2a2a2a"
+            gholl:textSize="13"
+            gholl:pyTextSize="10"
+            gholl:showPinyin="false"
+            gholl:pyTextColor="#000000"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_below="@+id/text"
+        android:layout_above="@+id/ll_bottom"
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:divider="#FFFFFF"
+        android:dividerHeight="4dp"
+        android:layout_height="match_parent"></ListView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:text="找老师"/>
+    </LinearLayout>
+</RelativeLayout>
