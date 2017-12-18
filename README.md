@@ -13,19 +13,30 @@
 在Project root的build.gradle中添加：
 
 allprojects {
+
     repositories {
+    
         ...
         maven { url 'http://maven.gholl.com/nexus/content/repositories/android-tools/' }
+        
     }
+    
 }
-在Module中添加：
+
+在app 中添加：
 
 单独使用中文转拼音的jar包
+
 dependencies {
+
     compile 'com.gholl.tools:GhollPy4Android:1.0.0' 
+    
 }
 
 使用拼音展示控件（包含jar包）
+
 dependencies {
+
     compile 'com.gholl.tools:PinyinTextView:1.0.1'
+    
 }
